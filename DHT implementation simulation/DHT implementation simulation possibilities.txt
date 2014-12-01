@@ -1,0 +1,6 @@
+Hi.
+
+Here are some possible useful links showing that DHT simulation/implementation might be a good idea :
+
+https://github.com/gsko/mdht
+https://pypi.python.org/pypi/entangled/0.1
