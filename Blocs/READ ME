@@ -15,5 +15,11 @@ calcul is a little tool to compute the required number of parts necessary given 
 
 This program is an implementation of the idea described in this paper : http://guillaume.piolle.fr/doc/Bouget13a.pdf
 
+Before using the program you should start Overlay Weaver like this :
+
+IV_DHT_Block/Code/Overlay Weaver/overlayweaver/owemu scenar/scenario_file_to_start
+
+When Overlay Weaver is started, the program can be used.
+
 
 Authors : Anas EL HADJ AMOR & Ionathan Noblins
