@@ -1,0 +1,19 @@
+This program is an implementation of ephemeral publication with the possibility of data degradation. It uses the churn of a DHT to make data unavailable. 
+
+We use Overlay Weaver (http://overlayweaver.sourceforge.net/) to emulate a DHT.
+
+InputDataClient.py will allow a user to create degraded Data of his original geolocalisation information, and encrypt them. Then the encryption keys will be send to the DHT using Shamir's Secret to ensure the ephemeral publication.
+
+DataRetrievingClient allows a user to get a key back from the DHT, and decrypt the encrypted geolocalisation data.
+
+To Exploitant is just a tool to choose which degradation data to send to an exploitant.
+
+Cleaner is a tool to clean any temporary file.
+
+calcul is a little tool to compute the required number of parts necessary given the total number of parts, the churn and the standard deviation when using Shamir's Secret.
+
+
+This program is an implementation of the idea described in this paper : http://guillaume.piolle.fr/doc/Bouget13a.pdf
+
+
+Authors : Anas EL HADJ AMOR & Ionathan Noblins

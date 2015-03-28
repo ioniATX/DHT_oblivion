@@ -1,0 +1,40 @@
+# Invokes an Overlay Visualizer and 20 instances of DHT shell
+
+timeoffset 2000
+
+# id emu0 ?
+class ow.tool.visualizer.Main
+schedule 0 invoke
+
+
+
+# du coup emu1 pour lui et emu2 pour son pote
+class ow.tool.dhtshell.Main
+arg -p 10000 -m emu0 
+schedule 6000 invoke
+
+arg -p 10001 -m emu0
+schedule 6000 invoke
+
+arg -m emu0 emu2
+schedule 8000,1000,4 invoke
+
+
+
+schedule 35000 control 3 halt
+arg -m emu0 emu2
+schedule 39000 invoke 3
+
+
+schedule 40000 control 4 halt
+arg -m emu0 emu2
+schedule 42000 invoke 4
+
+schedule 47000 control 5 halt
+arg -m emu0 emu2
+schedule 52000 invoke 5
+
+
+schedule 55000 control 6 halt
+arg -m emu0 emu2
+schedule 60000 invoke 6

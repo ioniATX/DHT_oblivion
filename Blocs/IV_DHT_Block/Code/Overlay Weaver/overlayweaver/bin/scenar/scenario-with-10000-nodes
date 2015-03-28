@@ -1,0 +1,35 @@
+# A scenario invoking 10000 DHT shell instances
+# 300 sec
+
+class ow.tool.msgcounter.Main
+schedule 0 invoke
+
+timeoffset 1000
+
+# invoke
+class ow.tool.dhtshell.Main
+#class ow.tool.mcastshell.Main
+
+arg -m emu0 -r Iterative -a Chord
+#arg -m emu0 -r Recursive -a Chord
+schedule 0 invoke
+schedule 5000,1,9999 invoke
+
+# status
+#scheduledaemon 0,10000 control 0 status
+
+# join
+timeoffset 20000
+include scenar/10000-join-20
+
+# churn
+#timeoffset 250000
+#include 10000-churn-70-10.0
+
+# put
+timeoffset 250000
+include scenar/10000-put-2
+
+# get
+timeoffset 280000
+include scenar/10000-get-2

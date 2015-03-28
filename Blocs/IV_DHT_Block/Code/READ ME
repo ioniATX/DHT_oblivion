@@ -1,0 +1,10 @@
+Commandes pour test 
+
+Pour tester le bloc 4 dans la phase on passe de Points à clés de localisation :
+python Par(faire tab) Input out localhost 10000 
+
+
+Pour le sens inverse : 
+python OWI.py localhost 10000 testRetour testRetourout value 
+
+ChurnScenarioFile permet de faire un bout de scénario à include pour mettre en compte le churn
